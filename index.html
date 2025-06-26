@@ -111,36 +111,39 @@
             font-style: italic;
         }
 
-        /* Floral Decorations */
-        .floral-decoration {
+        /* Floral Border */
+        .floral-border-container {
             position: absolute;
-            width: 200px;
-            height: 200px;
-            opacity: 0.6;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 4500px;
+            height: 80%;
+            max-height: 4700px;
+            z-index: 1;
         }
 
-        .floral-top-left {
-            top: 10%;
-            left: 10%;
-            transform: rotate(-15deg);
+        .floral-border {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.4;
         }
 
-        .floral-top-right {
-            top: 10%;
-            right: 10%;
-            transform: rotate(15deg);
+        /* Holy Spirit Dove */
+        .holy-spirit-dove {
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
         }
 
-        .floral-bottom-left {
-            bottom: 10%;
-            left: 10%;
-            transform: rotate(15deg);
-        }
-
-        .floral-bottom-right {
-            bottom: 10%;
-            right: 10%;
-            transform: rotate(-15deg);
+        .dove-icon {
+            width: 80px;
+            height: 80px;
+            opacity: 0.8;
         }
 
         /* Sections */
@@ -293,9 +296,14 @@
                 font-size: 14px;
             }
 
-            .floral-decoration {
-                width: 150px;
-                height: 150px;
+            .floral-border-container {
+                width: 120%;
+                height: 110%;
+            }
+
+            .dove-icon {
+                width: 60px;
+                height: 60px;
             }
         }
 
@@ -327,25 +335,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Floral Decorations -->
-        <div class="floral-decoration floral-top-left">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path class="flower" d="M50,80 C45,70 55,60 65,70 C75,60 85,70 80,80 C85,90 75,100 65,90 C55,100 45,90 50,80 Z"/>
-                <circle class="flower" cx="65" cy="80" r="3" fill="#daa520"/>
-                <path class="leaf" d="M40,90 Q30,100 35,110 Q45,105 40,90"/>
-                <path class="leaf" d="M90,70 Q100,60 105,70 Q95,80 90,70"/>
-                <path class="flower" d="M120,40 C115,30 125,20 135,30 C145,20 155,30 150,40 C155,50 145,60 135,50 C125,60 115,50 120,40 Z"/>
-                <circle class="flower" cx="135" cy="40" r="3" fill="#daa520"/>
-            </svg>
+        <!-- Floral Border Background -->
+        <div class="floral-border-container">
+            <img src="floral.png" alt="Floral Border" class="floral-border">
         </div>
-        
-        <div class="floral-decoration floral-top-right">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path class="flower" d="M150,80 C145,70 155,60 165,70 C175,60 185,70 180,80 C185,90 175,100 165,90 C155,100 145,90 150,80 Z"/>
-                <circle class="flower" cx="165" cy="80" r="3" fill="#daa520"/>
-                <path class="leaf" d="M140,90 Q130,100 135,110 Q145,105 140,90"/>
-                <path class="leaf" d="M190,70 Q200,60 205,70 Q195,80 190,70"/>
-            </svg>
+
+        <!-- Holy Spirit Dove -->
+        <div class="holy-spirit-dove">
+            <img src="We.svg" alt="Holy Spirit Dove" class="dove-icon">
         </div>
 
         <div class="hero-content">
